@@ -66,20 +66,3 @@ odoo.connect(function (err) {
     console.log("Result: ", value);
   });
 });
-
-// odoo.connect(function (err) {
-//   if (err) {
-//     return console.log(err);
-//   }
-
-//   var inParams = [];
-//   inParams.push([3, 4, 5]); //id to delete
-//   var params = [];
-//   params.push(inParams);
-//   odoo.execute_kw("account.move", "unlink", params, function (err, value) {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log("Result: ", value);
-//   });
-// });
