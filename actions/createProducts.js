@@ -3,26 +3,27 @@ function createProducts() {
     if (err) {
       return console.log(err);
     }
-    console.log("Connected to Odoo server.");
+    console.log('Connected to Odoo server.');
 
     let inParams = [];
     inParams.push({
-      name: "producto 500",
+      name: 'producto 500',
       sequence: 1,
-      type: "service",
+      type: 'service',
+      list_price: 500,
     });
 
     let params = [];
     params.push(inParams);
     odoo.execute_kw(
-      "product.template",
-      "create",
+      'product.template',
+      'create',
       params,
       function (err, value) {
         if (err) {
           return console.log(err);
         }
-        console.log("Result: ", value);
+        console.log('Result: ', value);
       }
     );
   });
